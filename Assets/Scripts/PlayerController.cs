@@ -7,32 +7,15 @@ public class PlayerController : MonoBehaviour
     private float _fallVelocity = 0;
     public float gravity = 9.8f;
     public float jumpForce;
-    public float speed;
+    public float walkspeed;
+    public float runSpeed;
+
+    private float curSpeed;
 
     private Vector3 _moveVector;
     private CharacterController _characterController;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _characterController = GetComponent<CharacterController>();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        _characterController.Move(_moveVector * speed *  Time.fixedDeltaTime);
-
-        _fallVelocity += gravity * Time.fixedDeltaTime;
-        _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
-
-        if (_characterController.isGrounded)
-        {
-            _fallVelocity = 0;
-        }
-    }
-
-    private void Update()
+    private void PlayerConrollsUpdate()
     {
         _moveVector = Vector3.zero;
 
@@ -60,5 +43,42 @@ public class PlayerController : MonoBehaviour
         {
             _fallVelocity -= jumpForce;
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            curSpeed = runSpeed;
+        }
+        else curSpeed = walkspeed;
+    }
+
+    private void PlayerPositionFixedUpdate()
+    {
+        _characterController.Move(_moveVector * curSpeed * Time.fixedDeltaTime);
+
+        _fallVelocity += gravity * Time.fixedDeltaTime;
+        _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
+
+        if (_characterController.isGrounded)
+        {
+            _fallVelocity = 0;
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        curSpeed = walkspeed;
+        _characterController = GetComponent<CharacterController>();
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        PlayerPositionFixedUpdate();
+    }
+
+    private void Update()
+    {
+        PlayerConrollsUpdate();
     }
 }
