@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public PlayerController player;
     public float viewAngle;
 
-    private bool _isPlayerNoticed;
+    public bool _isPlayerNoticed;
     private NavMeshAgent _navMeshAgent;
 
     private void PickPatrolPoint()
