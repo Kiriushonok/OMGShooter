@@ -493,12 +493,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2560931839009488613, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
+      propertyPath: m_Height
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560931839009488613, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
       propertyPath: m_Radius
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2560931839009488613, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
       propertyPath: m_Center.y
-      value: 0.95
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560931839009488613, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2560931839009488615, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
       propertyPath: m_RootOrder
@@ -510,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2560931839009488615, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2560931839009488615, guid: d2fe4efbdd077664abf2395cc7979f49, type: 3}
       propertyPath: m_LocalPosition.z
