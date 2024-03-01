@@ -507,6 +507,7 @@ MonoBehaviour:
   valueRectTransform: {fileID: 9087685268365339121}
   gameOverScreen: {fileID: 437173782939655510}
   gameplayUI: {fileID: 5034233547855666466}
+  animator: {fileID: 1100255755078389666}
 --- !u!114 &5547950680489967714
 MonoBehaviour:
   m_ObjectHideFlags: 0
