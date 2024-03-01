@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
             curSpeed = runSpeed;
-            animator.SetBool("isRunning", true);
 
             if (Input.GetKey(KeyCode.W)) movementDirection = 5;
             if (Input.GetKey(KeyCode.S)) movementDirection = 6;
@@ -63,7 +62,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isRunning", false);
             curSpeed = walkspeed;
         }
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) {_moveVector /= 1.41f; }
