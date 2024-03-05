@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
         var movementDirection = 0;
         _moveVector = Vector3.zero;
 
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isJumpingForward", false);
+
         if (Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
@@ -48,6 +51,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity -= jumpForce;
+
+            if (Input.GetKey(KeyCode.W))
+            {
+
+                animator.SetBool("isJumpingForward", true);
+            }
+
+            else animator.SetBool("isJumping", true);
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
@@ -96,11 +107,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         PlayerPositionFixedUpdate();
-        PlayerConrollsUpdate();
+        
     }
 
     private void Update()
     {
-        
+        PlayerConrollsUpdate();
     }
 }
