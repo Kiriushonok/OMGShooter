@@ -3823,6 +3823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinKnifes
       objectReference: {fileID: 0}
+    - target: {fileID: 1929062784309751871, guid: b3c0b7c0c94818c4c901cdabe04175ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3c0b7c0c94818c4c901cdabe04175ae, type: 3}
 --- !u!1 &1815909954
@@ -4292,6 +4296,10 @@ PrefabInstance:
     - target: {fileID: 4099813434753061644, guid: 4dacdee2888631542a0cd78302ec0dc9, type: 3}
       propertyPath: m_Name
       value: GoblinArcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099813434753061644, guid: 4dacdee2888631542a0cd78302ec0dc9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4099813434753061645, guid: 4dacdee2888631542a0cd78302ec0dc9, type: 3}
       propertyPath: m_RootOrder
