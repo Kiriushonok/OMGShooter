@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 10;
+    public float health = 100;
     public RectTransform valueRectTransform;
     public GameObject gameOverScreen;
     public GameObject gameplayUI;

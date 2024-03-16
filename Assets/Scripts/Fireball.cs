@@ -6,7 +6,7 @@ public class Fireball : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    public float damage = 5;
+    public float damage = 35;
 
     private void MoveFixedUpdate()
     {

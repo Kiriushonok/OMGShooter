@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float health = 10;
+    public float health = 100;
 
 
     private void KillMob()

@@ -46,7 +46,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -80,6 +80,7 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 0}
   viewAngle: 90
+  damage: 50
   _isPlayerNoticed: 0
 --- !u!114 &-7460189340387765782
 MonoBehaviour:
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68024f6b68b076245afa7eaf9b4214f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 70
 --- !u!136 &7600987078866944362
 CapsuleCollider:
   m_ObjectHideFlags: 0
