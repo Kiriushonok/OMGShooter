@@ -5,11 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float health = 100;
+    public float xp_per_Kill = 20;
 
+    public PlayerProgress playerProgress;
 
     private void KillMob()
     {
         Destroy(gameObject);
+        playerProgress.AddXP(xp_per_Kill);
     }
 
     public void Injure(float damage)
@@ -19,5 +22,10 @@ public class EnemyHealth : MonoBehaviour
         {
             KillMob();
         }
+    }
+
+    private void Start()
+    {
+        playerProgress = FindObjectOfType<PlayerProgress>();
     }
 }

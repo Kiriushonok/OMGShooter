@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FireballCaster : MonoBehaviour
 {
-    public Fireball fireball;
+    public Fireball fireballPrefab;
     public Transform fireballSourceTransform;
+    public float damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,8 @@ public class FireballCaster : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(fireball, fireballSourceTransform.position, fireballSourceTransform.rotation);
+            var fireball = Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
+            fireball.damage = damage;
         }
     }
 }
