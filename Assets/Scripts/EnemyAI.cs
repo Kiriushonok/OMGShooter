@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    public Animator animator;
     public List<Transform> patrolPoints;
     public PlayerController player;
     public float viewAngle;
@@ -59,9 +61,9 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackUpdate()
     {
-        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && _isPlayerNoticed) 
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance / 1.1 && _isPlayerNoticed) 
         {
-            _playerHealth.Injure(damage * Time.deltaTime);
+            animator.SetTrigger("attack");
         }
     }
 
