@@ -79,6 +79,7 @@ MonoBehaviour:
   player: {fileID: 0}
   viewAngle: 90
   damage: 20
+  attackDistance: 0.65
   _isPlayerNoticed: 0
 --- !u!114 &7190965603633950581
 MonoBehaviour:

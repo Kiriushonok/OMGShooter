@@ -12,6 +12,11 @@ public class PlayerHealth : MonoBehaviour
 
     private float _maxHealth;
 
+    public bool IsAlive()
+    {
+        return health > 0;
+    }
+
     private void Death()
     {
         gameOverScreen.SetActive(true);

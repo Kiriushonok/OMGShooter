@@ -11,8 +11,9 @@ public class EnemyAI : MonoBehaviour
     public PlayerController player;
     public float viewAngle;
     public float damage = 20;
-
+    public float attackDistance = 0.65f;
     public bool _isPlayerNoticed;
+
     private NavMeshAgent _navMeshAgent;
     private PlayerHealth _playerHealth;
 
@@ -42,8 +43,10 @@ public class EnemyAI : MonoBehaviour
 
     private void EnemyVisionUpdate()
     {
-        var ditection = player.transform.position - transform.position;
+        
         _isPlayerNoticed = false;
+        if (!_playerHealth.IsAlive()) return;
+        var ditection = player.transform.position - transform.position;
 
         if (Vector3.Angle(transform.forward, ditection) < viewAngle)
         {
@@ -61,18 +64,18 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackUpdate()
     {
-        if (_isPlayerNoticed){
-        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance) 
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && _isPlayerNoticed) 
         {
-                _playerHealth.Injure(damage * Time.deltaTime);
-            }
+            animator.SetBool("attack", true);
+            
         }
     }
 
     public void MobAttack()
     {
+        animator.SetBool("attack", false);
         if (!_isPlayerNoticed) return;
-        if (_navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance) return;
+        if (_navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance + attackDistance) return;
         _playerHealth.Injure(damage);
     }
 
