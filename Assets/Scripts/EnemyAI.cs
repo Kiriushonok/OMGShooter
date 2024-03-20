@@ -64,6 +64,7 @@ public class EnemyAI : MonoBehaviour
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             animator.SetBool("attack", true);
             
 =======
