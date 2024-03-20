@@ -30,7 +30,12 @@ public class PlayerProgress : MonoBehaviour
     private void SetLvl(int value)
     {
         _currentLvl = value;
-        _targetXP = levels[_currentLvl - 1].xpForNextLvl;
+
+        var curLvlFromList = levels[_currentLvl - 1];
+
+        _targetXP = curLvlFromList.xpForNextLvl;
+        GetComponent<FireballCaster>().damage = curLvlFromList.fireballDamage;
+        GetComponent<GrenadeCaster>().damage = curLvlFromList.grenadeDamage;
     }
 
     private void DrawUI()

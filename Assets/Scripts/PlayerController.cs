@@ -91,7 +91,6 @@ public class PlayerController : MonoBehaviour
     {
         curSpeed = walkspeed;
         _characterController = GetComponent<CharacterController>();
-        animator.SetFloat("runSpeed", runSpeed);
     }
 
     // Update is called once per frame

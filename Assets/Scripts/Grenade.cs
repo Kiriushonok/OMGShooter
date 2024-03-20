@@ -6,6 +6,7 @@ public class Grenade : MonoBehaviour
 {
 
     public float delay = 0;
+    public float damage = 30;
     public GameObject explosionPrefab;
 
     private void OnCollisionEnter(Collision collision)
@@ -18,6 +19,7 @@ public class Grenade : MonoBehaviour
     {
         var explosion = Instantiate(explosionPrefab);
         explosion.transform.position = transform.position;
+        explosion.GetComponent<Explosion>().damage = damage;
     }
 
     // Start is called before the first frame update

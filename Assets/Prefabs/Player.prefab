@@ -734,8 +734,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24fefe7b868c64abca74a0b7319a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 5472054285329757448, guid: ec4cbc1b87f942845b51f87e348deb6b, type: 3}
+  fireballPrefab: {fileID: 0}
   fireballSourceTransform: {fileID: 7430141747884786962}
+  damage: 10
 --- !u!114 &5181603634933067219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,19 +797,19 @@ MonoBehaviour:
   levelValueTMP: {fileID: 6898926941408781772}
   levels:
   - fireballDamage: 10
-    grenadeDamage: 20
+    grenadeDamage: 30
     xpForNextLvl: 100
   - fireballDamage: 12
-    grenadeDamage: 25
+    grenadeDamage: 40
     xpForNextLvl: 150
   - fireballDamage: 15
-    grenadeDamage: 30
+    grenadeDamage: 50
     xpForNextLvl: 250
   - fireballDamage: 17
-    grenadeDamage: 40
+    grenadeDamage: 60
     xpForNextLvl: 300
   - fireballDamage: 20
-    grenadeDamage: 50
+    grenadeDamage: 70
     xpForNextLvl: 500
 --- !u!1 &2588346405544073763
 GameObject:

@@ -8,6 +8,7 @@ public class GrenadeCaster : MonoBehaviour
     public Rigidbody grenadePrefab;
     public Transform grenadeSourceTransform;
     public float force = 300;
+    public float damage = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class GrenadeCaster : MonoBehaviour
             var grenade = Instantiate(grenadePrefab);
             grenade.transform.position = grenadeSourceTransform.position;
             grenade.GetComponent<Rigidbody>().AddForce(grenadeSourceTransform.forward * force);
+            grenade.GetComponent<Grenade>().damage = damage;
         }
     }
 }
