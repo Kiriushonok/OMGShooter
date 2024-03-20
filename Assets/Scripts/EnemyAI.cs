@@ -70,6 +70,8 @@ public class EnemyAI : MonoBehaviour
 =======
             _playerHealth.Injure(damage * Time.deltaTime);
 >>>>>>> parent of cbd3b82 (Started adding goblin with knifes animations)
+=======
+                _playerHealth.Injure(damage * Time.deltaTime);
             }
 >>>>>>> parent of 737fd20 (Finished goblin with knifes animations)
 =======
