@@ -49,8 +49,8 @@ NavMeshAgent:
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 220
-  m_StoppingDistance: 1.1
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4367bb37c3249e848b4c649749dbe95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1929062784624048470}
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -94,9 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 110
-  xp_per_Kill: 20
-  playerProgress: {fileID: 0}
-  animator: {fileID: 1929062784624048470}
 --- !u!136 &8989855066452333826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -166,10 +162,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 15f6ddd4c7cf0734e92b0b90c4c955df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
 --- !u!1 &1929062784614550236 stripped
@@ -193,10 +185,5 @@ MonoBehaviour:
 --- !u!4 &1929062784615044860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400074, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
-  m_PrefabInstance: {fileID: 1929062784614648886}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1929062784624048470 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
   m_PrefabInstance: {fileID: 1929062784614648886}
   m_PrefabAsset: {fileID: 0}

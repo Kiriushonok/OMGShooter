@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
-    public Animator animator;
     public List<Transform> patrolPoints;
     public PlayerController player;
     public float viewAngle;
@@ -66,8 +64,12 @@ public class EnemyAI : MonoBehaviour
     {
         if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && _isPlayerNoticed) 
         {
+<<<<<<< HEAD
             animator.SetBool("attack", true);
             
+=======
+            _playerHealth.Injure(damage * Time.deltaTime);
+>>>>>>> parent of cbd3b82 (Started adding goblin with knifes animations)
         }
     }
 

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -10,15 +9,10 @@ public class EnemyHealth : MonoBehaviour
 
     public PlayerProgress playerProgress;
 
-    public Animator animator;
-
     private void KillMob()
     {
+        Destroy(gameObject);
         playerProgress.AddXP(xp_per_Kill);
-        animator.SetTrigger("death");
-        GetComponent<EnemyAI>().enabled = false;
-        GetComponent<NavMeshAgent>().enabled = false;
-        //GetComponent<CapsuleCollider>().enabled = false;
     }
 
     public void Injure(float damage)
@@ -27,11 +21,6 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             KillMob();
-        }
-
-        else
-        {
-            animator.SetTrigger("hit");
         }
     }
 
