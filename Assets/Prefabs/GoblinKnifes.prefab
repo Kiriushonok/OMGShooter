@@ -78,7 +78,7 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 0}
   viewAngle: 90
-  damage: 50
+  damage: 20
   _isPlayerNoticed: 0
 --- !u!114 &7190965603633950581
 MonoBehaviour:
@@ -171,6 +171,24 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 15f6ddd4c7cf0734e92b0b90c4c955df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
+--- !u!1 &1929062784614550236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100074, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
+  m_PrefabInstance: {fileID: 1929062784614648886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2071520446380665910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929062784614550236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a34497cf875154a8ca4af28280967b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 1929062784309751870}
 --- !u!4 &1929062784615044860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400074, guid: 741f73214c8e59045b42ebac4be91444, type: 3}

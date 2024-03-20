@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public List<Transform> patrolPoints;
     public PlayerController player;
     public float viewAngle;
-    public float damage = 50;
+    public float damage = 20;
 
     public bool _isPlayerNoticed;
     private NavMeshAgent _navMeshAgent;
@@ -61,10 +61,19 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackUpdate()
     {
-        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance / 1.1 && _isPlayerNoticed) 
+        if (_isPlayerNoticed){
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance) 
         {
-            animator.SetTrigger("attack");
+                _playerHealth.Injure(damage * Time.deltaTime);
+            }
         }
+    }
+
+    public void MobAttack()
+    {
+        if (!_isPlayerNoticed) return;
+        if (_navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance) return;
+        _playerHealth.Injure(damage);
     }
 
     // Start is called before the first frame update
