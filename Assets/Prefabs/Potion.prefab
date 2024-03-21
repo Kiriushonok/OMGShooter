@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2683488011766663081}
   - component: {fileID: -1658238932091196689}
   - component: {fileID: -8405536431498330346}
-  - component: {fileID: 4226843280149196957}
+  - component: {fileID: 3237469916113608517}
   m_Layer: 0
   m_Name: Potion
   m_TagString: Untagged
@@ -118,9 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  damage: 30
   explosionPrefab: {fileID: 8835651702284807610, guid: 9cdfd242de6571742bfab7960f68f3db, type: 3}
---- !u!64 &4226843280149196957
-MeshCollider:
+--- !u!135 &3237469916113608517
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,10 +130,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3891441961252961410
 GameObject:
   m_ObjectHideFlags: 0
