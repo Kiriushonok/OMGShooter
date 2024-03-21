@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         gameplayUI.SetActive(false);
+        gameOverScreen.GetComponent<Animator>().SetTrigger("show");
         GetComponent<PlayerController>().enabled = false;
         GetComponent<FireballCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;

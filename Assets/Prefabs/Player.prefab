@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6327524711797099768}
+  - component: {fileID: 8819543039911205894}
   m_Layer: 5
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -205,6 +206,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &8819543039911205894
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437173782939655510}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 661c28b09472aab45ae64257db05ead2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1020660162534341785
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +802,7 @@ MonoBehaviour:
   grenadePrefab: {fileID: -1658238932091196689, guid: fa80e4e47ba22ab4b80696034a3b38fb, type: 3}
   grenadeSourceTransform: {fileID: 6274993146921939283}
   force: 450
+  damage: 30
 --- !u!114 &5799560548282646652
 MonoBehaviour:
   m_ObjectHideFlags: 0
