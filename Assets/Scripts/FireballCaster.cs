@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FireballCaster : MonoBehaviour
@@ -21,6 +22,8 @@ public class FireballCaster : MonoBehaviour
         {
             var fireball = Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
             fireball.damage = damage;
+            var audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
         }
     }
 }
