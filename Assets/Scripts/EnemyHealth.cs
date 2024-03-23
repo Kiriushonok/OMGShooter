@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
         animator.SetTrigger("death");
         GetComponent<EnemyAI>().enabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
-        //GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 
     public void Injure(float damage)
